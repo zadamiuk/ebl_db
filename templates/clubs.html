@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Energa Basket Liga</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+        <div class="container"></div>
+            <h1> Energa Basket Liga</h1>
+            {% if data %}
+                <table>
+                    <thead>
+                        <td>ID</td>
+                        <td>Nazwa drużyny</td>
+                        <td>Miasto</td>
+                        <td>Wygrane</td>
+                        <td>Porażki</td>
+                        <td>Edytuj</td>
+                        <td>Usuń</td>
+                    </thead>
+                    <tbody>
+                        {% for row in data %}
+                        <tr>
+                            <td> {{row[0]}} </td>
+                            <td> {{row[1]}} </td>
+                            <td> {{row[2]}} </td>
+                            <td> {{row[3]}} </td>
+                            <td> {{row[4]}} </td>
+                            <td> <a href="/update-club/{{row[0]}}"> <img class="edit" src="/static/edit.ico"> </a> </td>
+                            <td> <a class="delete" href="/delete-club/{{row[0]}}"> X </a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <br>
+                <form action="/add-club" method = "get">
+                    <button class="add-club" type ="submit" >
+                        Dodaj klub
+                    </button>
+                </form>
+            {% else %}
+                <h1> Brak danych </h1>
+            {% endif %}
+        </div>
+    </body>
+</html>

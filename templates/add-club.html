@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj nowy klub</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="container">
+        <h1>Dodaj nowy klub</h1>
+        {% if id %}
+            <form action="/add-club" method = "post">
+                <table class = "form">
+                    <tr>
+                        <td class ="input">
+                            <label for = "id">
+                                ID
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "number"
+                                   name = "new-id"
+                                   value = "{{ id }}"
+                                   readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class ="input">
+                            <label for = "team-name">
+                                Nazwa drużyny
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "string"
+                                   name = "new-team-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class ="input">
+                            <label for = "city-name">
+                                Miasto
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "string"
+                                   name = "new-city-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class ="input">
+                            <label for = "wins">
+                                Wygrane
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "number"
+                                   name = "new-wins">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class ="input">
+                            <label for = "loses">
+                                Porażki
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "number"
+                                   name = "new-loses">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="submit" colspan="2">
+                            <button class="submit" type ="submit">
+                                Dodaj!
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        {% else %}
+            <h1> Brak danych </h1>
+        {% endif %}
+    </div>
+
+</body>
+</html>
+
+</body>
+</html>
