@@ -1,0 +1,93 @@
+body {
+    font-family: verdana;
+}
+h1 {
+    color: red;
+    font-size: 50px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+h2 {
+    color: darkorange;
+    font-size: 30px;
+    text-align: center;
+}
+a.solution{
+    color: darkorange;
+    text-align: center;
+}
+img {
+    width: 300px;
+}
+div.container {
+    width: 100%;
+}
+
+table{
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    border: 3px solid #ff0000;
+}
+thead {
+    background-color: red;
+    color: white;
+    border: 2px solid;
+}
+tbody{
+    background-color: whitesmoke;
+}
+td {
+    height: 25px;
+    border: 2px solid;
+    text-align: center;
+    vertical-align: middle;
+}
+table.form {
+    border: none;
+    width: 30%;
+    margin-right: 35%;
+    margin-left: 35%;
+    padding-top: 10px;
+}
+td.input {
+    border: none;
+    background: aliceblue;
+}
+td.submit {
+    border: none;
+    background: aliceblue;
+    padding-top: 5%;
+}
+button {
+    font-family: Verdana;
+    font-weight: bold;
+}
+.submit {
+    font-size: 15px;
+    height: 40px;
+    width: 140px;
+    background-color: red;
+    color: white;
+}
+
+.add-club {
+    font-size: 15px;
+    height: 40px;
+    width: 10%;
+    background-color: red;
+    color: white;
+    margin-right: 30%;
+    margin-left: 70%;
+}
+
+.delete {
+    color: red;
+    font-weight: bold;
+}
+
+.edit {
+    height: 20px;
+    width: 20px;
+}
+

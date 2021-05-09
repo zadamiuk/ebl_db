@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aktualizacja bazy danych</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zaktualizuj bazę danych.</h1>
+        {% if data %}
+            <form action="/update-club" method = "post">
+                <table class = "form">
+                    <tr>
+                        <td class ="input">
+                            <label for = "id">
+                                ID
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "number"
+                                   name = "id"
+                                   value = "{{data[0]}}"
+                                   readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class ="input">
+                            <label for = "team-name">
+                                Nazwa drużyny
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "string"
+                                   name = "team-name"
+                                   value = "{{data[1]}}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class ="input">
+                            <label for = "city-name">
+                                Miasto
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "string"
+                                   name = "city-name"
+                                   value = "{{data[2]}}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class ="input">
+                            <label for = "wins">
+                                Wygrane
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "number"
+                                   name = "wins"
+                                   value = "{{data[3]}}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class ="input">
+                            <label for = "loses">
+                                Porażki
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type = "number"
+                                   name = "loses"
+                                   value = "{{data[4]}}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="submit" colspan="2">
+                            <button class="submit" type ="submit">
+                                Zaktualizuj!
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        {% else %}
+            <h1> Brak danych </h1>
+        {% endif %}
+    </div>
+
+</body>
+</html>
